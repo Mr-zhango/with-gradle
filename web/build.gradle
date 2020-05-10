@@ -1,0 +1,11 @@
+
+
+plugins {
+    id 'war'
+}
+
+
+dependencies {
+    // 配置依赖关系
+    compile project(":core")
+}

@@ -1,0 +1,8 @@
+### JetBrains template
+.idea/
+.gradle/
+/*/.idea/
+/*/out/
+/*/build/
+**.iml
+**/**/target/

@@ -1,0 +1,30 @@
+apply plugin: 'maven-publish'
+
+//dependencies {
+//    // 配置依赖关系
+//    compile project(":model")
+//    testCompile group: 'junit', name: 'junit', version: '4.12'
+//}
+
+
+publishing {
+    publications {
+        publishProject(MavenPublication){
+            from components.java // 发布jar包
+            // from components.war // 发布war包
+
+        }
+    }
+        repositories {
+            maven {
+                // 指定要上传的maven 私服
+                url = ""
+//                credentials {
+//                    username 'root'
+//                    password 'admin'
+//                }
+            }
+        }
+
+
+}

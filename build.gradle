@@ -1,0 +1,31 @@
+// 需求
+// 1.所有的项目都需要使用Java插件web项目也需要依赖Java环境
+// 2.web子项目需要打为war包
+// 3.统一配置公共属性例如 group version
+// 4.统一管理资源库通用依赖配置例如logback日志功能的引入
+
+plugins {
+    id 'java'
+}
+
+// 配置统一的配置信息,包括root
+allprojects {
+    apply plugin: "java"
+    sourceCompatibility = 1.8
+    // 统一配置公共属性
+    group 'cn.myfreecloud'
+    version '1.0-SNAPSHOT'
+}
+
+// 配置公用的资源库
+subprojects {
+    repositories {
+        mavenCentral()
+    }
+
+    // 公共依赖
+    dependencies {
+        compile 'ch.qos.logback:logback-classic:1.2.2'
+    }
+
+}
