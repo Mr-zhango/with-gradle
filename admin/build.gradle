@@ -27,7 +27,8 @@ dependencies {
             "org.apache.tomcat.embed:tomcat-embed-logging-juli:${tomcatVersion}",
             "org.apache.tomcat.embed:tomcat-embed-jasper:${tomcatVersion}"
 
-
+    // 编译期依赖 providedCompile
+    providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
 }
 
 //单一配直
